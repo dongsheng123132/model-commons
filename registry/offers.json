@@ -1,0 +1,21 @@
+{
+  "schema": "model-commons.registry/v1",
+  "version": 1,
+  "generated_at": "2026-08-29T00:00:00Z",
+  "offers": [
+    {
+      "id": "bai-deepseek-v4-flash-promo",
+      "provider": "B.AI",
+      "classification": "promo_free",
+      "status": "community_reported",
+      "protocols": ["openai-chat", "openai-responses", "anthropic-messages"],
+      "targets": ["claude-code", "codex", "pi", "opencode"],
+      "official_domains": ["b.ai", "docs.b.ai"],
+      "signup_url": "https://b.ai/",
+      "billing_risk": "possible",
+      "checked_at": "2026-08-29T00:00:00Z",
+      "recheck_by": "2026-09-05T00:00:00Z",
+      "evidence": [{"url": "https://docs.b.ai/llmservice/pricing-and-usage/", "kind": "official_pricing"}]
+    }
+  ]
+}
