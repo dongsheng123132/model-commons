@@ -1,0 +1,47 @@
+name: Monitor public sources
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: public-source-monitor
+  cancel-in-progress: false
+
+jobs:
+  snapshot-openrouter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - run: node scripts/sync-openrouter.mjs
+      - run: |
+          if git diff --quiet -- site/data/openrouter-free.json; then exit 0; fi
+          git config user.name 'model-commons-monitor[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data/openrouter-free.json
+          git commit -m 'chore: refresh OpenRouter public free-model snapshot'
+          git push
+
+  report-stale-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - run: node scripts/validate-registry.mjs
+      - id: report
+        run: node scripts/stale-report.mjs > stale-report.md; test -s stale-report.md && echo 'has_stale=true' >> "$GITHUB_OUTPUT" || true
+      - if: steps.report.outputs.has_stale == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create registry-stale --color B60205 --description 'Registry entry needs an evidence recheck' --force
+          existing="$(gh issue list --state open --label registry-stale --search 'Registry recheck overdue in:title' --json number --jq '.[0].number')"
+          if [ -z "$existing" ]; then gh issue create --title 'Registry recheck overdue' --label registry-stale --body-file stale-report.md; fi

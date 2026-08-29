@@ -22,3 +22,7 @@ This is not a token pool. Users obtain and keep their own provider credentials.
 ## Contribute
 
 Use the repository issue forms for a candidate, verification report, or risk report. AI agents should follow [the submission skill](skills/model-commons-submit/SKILL.md). Every claim must be traceable to a first-party URL.
+
+## Unattended public-source monitor
+
+GitHub Actions refreshes an auditable snapshot of OpenRouter's public `:free` model directory every six hours and publishes it with the site. It also opens one `registry-stale` issue when an entry passes its recheck deadline. The monitor never marks an offer as verified, renews a deadline, applies for a credential, or handles user traffic; those decisions require public evidence and review.
