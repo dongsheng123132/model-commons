@@ -1,0 +1,20 @@
+name: Risk or expiry report / 风险或失效报告
+description: Report phishing, hidden billing, expired offers, or broken evidence.
+title: "risk: "
+labels: ["risk", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Never paste credentials, account details, prompts, or full model output. Urgent reports are quarantined before review."
+  - type: input
+    id: offer
+    attributes: {label: Offer ID or URL / 条目 ID 或链接}
+    validations: {required: true}
+  - type: dropdown
+    id: kind
+    attributes: {label: Risk type / 风险类别, options: [phishing, hidden_billing, expired, broken_link, policy_change, other]}
+    validations: {required: true}
+  - type: textarea
+    id: evidence
+    attributes: {label: Public evidence / 公开证据}
+    validations: {required: true}

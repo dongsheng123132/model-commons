@@ -1,0 +1,29 @@
+name: Supply candidate / 供给候选
+description: Submit evidence for a free, trial, local, or low-cost model offer.
+title: "candidate: "
+labels: ["candidate", "needs-evidence"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include API keys, cookies, account data, or private prompts. AI submissions must cite first-party sources."
+  - type: input
+    id: provider
+    attributes: {label: Provider / 厂商, placeholder: "B.AI"}
+    validations: {required: true}
+  - type: dropdown
+    id: classification
+    attributes:
+      label: Offer class / 供给分类
+      options: [permanent_free_tier, promo_free, trial_credit, subscription_bonus, low_cost, local_open_source]
+    validations: {required: true}
+  - type: input
+    id: evidence
+    attributes: {label: First-party evidence URL / 官方证据链接, placeholder: "https://docs.provider.example/pricing"}
+    validations: {required: true}
+  - type: textarea
+    id: conditions
+    attributes: {label: Conditions / 条件, description: "Region, card requirement, expiry, billing risk, protocol, and client compatibility."}
+    validations: {required: true}
+  - type: textarea
+    id: verification
+    attributes: {label: Optional anonymized verification / 可选脱敏实测, description: "Coarse region, date, client, HTTP status/error category only."}
