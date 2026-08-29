@@ -4,6 +4,22 @@
   "generated_at": "2026-08-29T00:00:00Z",
   "offers": [
     {
+      "id": "openrouter-free-router",
+      "provider": "OpenRouter",
+      "classification": "permanent_free_tier",
+      "status": "verified",
+      "protocols": ["openai-chat"],
+      "targets": ["codex", "pi", "opencode"],
+      "official_domains": ["openrouter.ai"],
+      "signup_url": "https://openrouter.ai/keys",
+      "model": "openrouter/free",
+      "dynamic_models_url": "https://openrouter.ai/api/v1/models",
+      "billing_risk": "no_charge_for_free_router; low_rate_limits",
+      "checked_at": "2026-08-29T00:00:00Z",
+      "recheck_by": "2026-09-05T00:00:00Z",
+      "evidence": [{"url": "https://openrouter.ai/docs/guides/routing/routers/free-router", "kind": "official_router_docs"}]
+    },
+    {
       "id": "bai-deepseek-v4-flash-promo",
       "provider": "B.AI",
       "classification": "promo_free",
