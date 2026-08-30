@@ -1,11 +1,11 @@
 {
   "schema": "model-commons.monitor/v1",
-  "generated_at": "2026-08-30T16:18:23.253Z",
+  "generated_at": "2026-08-30T16:20:38.124Z",
   "sources": {
     "openrouter-free-models": {
       "status": "ok",
-      "last_attempt_at": "2026-08-30T16:18:23.253Z",
-      "last_success_at": "2026-08-30T16:18:23.253Z",
+      "last_attempt_at": "2026-08-30T16:20:38.124Z",
+      "last_success_at": "2026-08-30T16:20:38.124Z",
       "http_status": 200,
       "content_sha256": "a16ad41a73d3c41fad546bfe0145bf535c2fa8bfe80474fd2864c6a676e0b81a",
       "failure_streak": 0,
@@ -13,8 +13,8 @@
     },
     "bai-promotions-en": {
       "status": "ok",
-      "last_attempt_at": "2026-08-30T16:18:23.253Z",
-      "last_success_at": "2026-08-30T16:18:23.253Z",
+      "last_attempt_at": "2026-08-30T16:20:38.124Z",
+      "last_success_at": "2026-08-30T16:20:38.124Z",
       "http_status": 200,
       "content_sha256": "3e81963f3efcb355d8c722ae10d8319bc86adba22656d40268aec09af2da4cf2",
       "failure_streak": 0,
@@ -22,15 +22,15 @@
         "api-zero-credit-promotion": "present"
       }
     },
-    "bai-pricing-en": {
+    "bai-api-docs-en": {
       "status": "ok",
-      "last_attempt_at": "2026-08-30T16:18:23.253Z",
-      "last_success_at": "2026-08-30T16:18:23.253Z",
+      "last_attempt_at": "2026-08-30T16:20:38.124Z",
+      "last_success_at": "2026-08-30T16:20:38.124Z",
       "http_status": 200,
-      "content_sha256": "59e510ad04066ad9d45a9c5adaec91fedaeb1a776cf85f24b6db0939dab0b950",
+      "content_sha256": "0cfb7270dae28b9d9270aeeb01ea22d6b671581731105f211db42281e07273fb",
       "failure_streak": 0,
       "assertions": {
-        "api-protocols-documented": "absent"
+        "api-protocols-documented": "present"
       }
     }
   }
