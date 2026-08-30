@@ -18,7 +18,13 @@
       "official_domain": "docs.b.ai",
       "stale_after_hours": 12,
       "alert_after_failures": 3,
-      "assertions": [{"id":"api-zero-credit-promotion","pattern":"DeepSeek-V4-Flash[\\s\\S]{0,1600}(0 Credits|billed at 0 Credits)"}],
+      "assertions": [
+        {"id":"deepseek-v4-flash-api-zero-credit","pattern":"DeepSeek-V4-Flash[\\s\\S]{0,1600}(0 Credits|billed at 0 Credits)"},
+        {"id":"hy3-api-zero-credit","pattern":"Hy3[\\s\\S]{0,1600}(0 Credits|billed at 0 Credits)"},
+        {"id":"mimo-v2-5-api-zero-credit","pattern":"MiMo-V2\\.5[\\s\\S]{0,1600}(0 Credits|billed at 0 Credits)"},
+        {"id":"glm-5-3-flash-api-zero-credit","pattern":"GLM-5\\.3-Flash[\\s\\S]{0,1600}(0 Credits|billed at 0 Credits)"},
+        {"id":"qwen3-8-flash-api-zero-credit","pattern":"Qwen3\\.8-Flash[\\s\\S]{0,1600}(0 Credits|billed at 0 Credits)"}
+      ],
       "can_prove": ["current_promotion_wording"],
       "cannot_prove": ["permanent_free", "account_eligibility", "user_quota"]
     },
