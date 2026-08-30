@@ -36,6 +36,54 @@
       "checked_at": "2026-08-29T00:00:00Z",
       "recheck_by": "2026-09-05T00:00:00Z",
       "evidence": [{"url": "https://docs.b.ai/llmservice/pricing-and-usage/", "kind": "official_pricing"}]
+    },
+    {
+      "id": "gemini-api-free-tier",
+      "provider": "Google Gemini API",
+      "classification": "permanent_free_tier",
+      "status": "candidate",
+      "protocols": ["gemini-api"],
+      "targets": ["custom-client"],
+      "official_domains": ["ai.google.dev"],
+      "signup_url": "https://aistudio.google.com/",
+      "billing_risk": "free_tier_has_model_region_and_project_limits",
+      "monitor_source_ids": ["gemini-pricing-en"],
+      "availability_policy": "official_policy_and_user_project_required",
+      "checked_at": "2026-08-31T00:00:00Z",
+      "recheck_by": "2026-09-07T00:00:00Z",
+      "evidence": [{"url": "https://ai.google.dev/gemini-api/docs/pricing?hl=en", "kind": "official_pricing"}]
+    },
+    {
+      "id": "groq-free-plan",
+      "provider": "Groq",
+      "classification": "permanent_free_tier",
+      "status": "candidate",
+      "protocols": ["openai-chat"],
+      "targets": ["pi", "opencode", "custom-client"],
+      "official_domains": ["console.groq.com"],
+      "signup_url": "https://console.groq.com/keys",
+      "billing_risk": "organization_rate_limits_and_model_list_can_change",
+      "monitor_source_ids": ["groq-free-plan-limits"],
+      "availability_policy": "official_policy_and_user_account_required",
+      "checked_at": "2026-08-31T00:00:00Z",
+      "recheck_by": "2026-09-07T00:00:00Z",
+      "evidence": [{"url": "https://console.groq.com/docs/rate-limits", "kind": "official_rate_limits"}]
+    },
+    {
+      "id": "opencode-zen-limited-free",
+      "provider": "OpenCode Zen",
+      "classification": "promo_free",
+      "status": "candidate",
+      "protocols": ["openai-chat", "openai-responses"],
+      "targets": ["opencode", "custom-client"],
+      "official_domains": ["dev.opencode.ai", "opencode.ai"],
+      "signup_url": "https://opencode.ai/auth",
+      "billing_risk": "billing_details_and_paid_models_coexist; free_models_are_limited_time",
+      "monitor_source_ids": ["opencode-zen-free-models"],
+      "availability_policy": "official_policy_and_user_account_required",
+      "checked_at": "2026-08-31T00:00:00Z",
+      "recheck_by": "2026-09-07T00:00:00Z",
+      "evidence": [{"url": "https://dev.opencode.ai/docs/zen/", "kind": "official_zen_docs"}]
     }
   ]
 }

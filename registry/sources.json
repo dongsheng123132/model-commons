@@ -32,6 +32,39 @@
       "assertions": [{"id":"api-protocols-documented","pattern":"OpenAI Chat Completions[\\s\\S]{0,1200}Anthropic Messages"}],
       "can_prove": ["public_api_protocols"],
       "cannot_prove": ["current_promotion", "account_eligibility", "user_quota"]
+    },
+    {
+      "id": "gemini-pricing-en",
+      "kind": "official_text_page",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing?hl=en",
+      "official_domain": "ai.google.dev",
+      "stale_after_hours": 24,
+      "alert_after_failures": 3,
+      "assertions": [{"id":"free-tier-documented","pattern":"Start building free of charge[\\s\\S]{0,900}Free input"}],
+      "can_prove": ["free_tier_policy"],
+      "cannot_prove": ["model_availability_by_region", "account_eligibility", "user_quota"]
+    },
+    {
+      "id": "groq-free-plan-limits",
+      "kind": "official_text_page",
+      "url": "https://console.groq.com/docs/rate-limits",
+      "official_domain": "console.groq.com",
+      "stale_after_hours": 24,
+      "alert_after_failures": 3,
+      "assertions": [{"id":"free-plan-limits-documented","pattern":"Free Plan Limits"}],
+      "can_prove": ["free_plan_rate_limit_policy"],
+      "cannot_prove": ["account_eligibility", "exact_account_limits", "production_availability"]
+    },
+    {
+      "id": "opencode-zen-free-models",
+      "kind": "official_text_page",
+      "url": "https://dev.opencode.ai/docs/zen/",
+      "official_domain": "dev.opencode.ai",
+      "stale_after_hours": 12,
+      "alert_after_failures": 3,
+      "assertions": [{"id":"limited-time-free-models-documented","pattern":"The free models:[\\s\\S]{0,2400}limited time"}],
+      "can_prove": ["limited_time_free_model_policy"],
+      "cannot_prove": ["permanent_free", "no_billing_details_required", "account_eligibility"]
     }
   ]
 }
