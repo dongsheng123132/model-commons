@@ -23,14 +23,14 @@
       "cannot_prove": ["permanent_free", "account_eligibility", "user_quota"]
     },
     {
-      "id": "bai-pricing-en",
+      "id": "bai-api-docs-en",
       "kind": "official_text_page",
-      "url": "https://docs.b.ai/llmservice/pricing-and-usage/",
+      "url": "https://docs.b.ai/llmservice/api/",
       "official_domain": "docs.b.ai",
       "stale_after_hours": 24,
       "alert_after_failures": 3,
       "assertions": [{"id":"api-protocols-documented","pattern":"OpenAI Chat Completions[\\s\\S]{0,1200}Anthropic Messages"}],
-      "can_prove": ["public_standard_pricing_context"],
+      "can_prove": ["public_api_protocols"],
       "cannot_prove": ["current_promotion", "account_eligibility", "user_quota"]
     }
   ]

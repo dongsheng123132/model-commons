@@ -31,7 +31,7 @@
       "official_domains": ["b.ai", "docs.b.ai"],
       "signup_url": "https://b.ai/",
       "billing_risk": "possible",
-      "monitor_source_ids": ["bai-promotions-en", "bai-pricing-en"],
+      "monitor_source_ids": ["bai-promotions-en", "bai-api-docs-en"],
       "availability_policy": "official_claim_required",
       "checked_at": "2026-08-29T00:00:00Z",
       "recheck_by": "2026-09-05T00:00:00Z",
