@@ -14,19 +14,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  snapshot-openrouter:
+  observe:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: {node-version: 22}
-      - run: node scripts/sync-openrouter.mjs
+      - run: node scripts/validate-registry.mjs
+      - run: node scripts/monitor-sources.mjs
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/monitor-alerts.mjs > monitor-alerts.json
+          jq -c '.[]' monitor-alerts.json | while read -r alert; do
+            source_id="$(echo "$alert" | jq -r .id)"
+            alert_type="$(echo "$alert" | jq -r .type)"
+            title="[monitor:${source_id}:${alert_type}] official source needs review"
+            existing="$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number')"
+            if [ -z "$existing" ]; then
+              gh label create source-monitor --color B60205 --description 'Public source observation needs review' --force
+              gh issue create --title "$title" --label source-monitor --body "$(echo "$alert" | jq -r .body)"
+            fi
+          done
       - run: |
-          if git diff --quiet -- site/data/openrouter-free.json; then exit 0; fi
+          if git diff --quiet -- site/data; then exit 0; fi
           git config user.name 'model-commons-monitor[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add site/data/openrouter-free.json
-          git commit -m 'chore: refresh OpenRouter public free-model snapshot'
+          git add site/data
+          git commit -m 'chore: refresh public-source observations'
           git push
 
   report-stale-registry:

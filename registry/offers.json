@@ -14,6 +14,8 @@
       "signup_url": "https://openrouter.ai/keys",
       "model": "openrouter/free",
       "dynamic_models_url": "https://openrouter.ai/api/v1/models",
+      "monitor_source_ids": ["openrouter-free-models"],
+      "availability_policy": "public_directory_only",
       "billing_risk": "no_charge_for_free_router; low_rate_limits",
       "checked_at": "2026-08-29T00:00:00Z",
       "recheck_by": "2026-09-05T00:00:00Z",
@@ -29,6 +31,8 @@
       "official_domains": ["b.ai", "docs.b.ai"],
       "signup_url": "https://b.ai/",
       "billing_risk": "possible",
+      "monitor_source_ids": ["bai-promotions-en", "bai-pricing-en"],
+      "availability_policy": "official_claim_required",
       "checked_at": "2026-08-29T00:00:00Z",
       "recheck_by": "2026-09-05T00:00:00Z",
       "evidence": [{"url": "https://docs.b.ai/llmservice/pricing-and-usage/", "kind": "official_pricing"}]

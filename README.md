@@ -25,4 +25,4 @@ Use the repository issue forms for a candidate, verification report, or risk rep
 
 ## Unattended public-source monitor
 
-GitHub Actions refreshes an auditable snapshot of OpenRouter's public `:free` model directory every six hours and publishes it with the site. It also opens one `registry-stale` issue when an entry passes its recheck deadline. The monitor never marks an offer as verified, renews a deadline, applies for a credential, or handles user traffic; those decisions require public evidence and review.
+GitHub Actions monitors a whitelist of official public sources every six hours: OpenRouter's `:free` model directory, B.AI's promotions page, and B.AI's pricing/protocol documentation. It publishes a small observation snapshot and creates a source-specific Issue for repeated source failure or a missing monitored assertion. It also opens one `registry-stale` issue when an entry passes its recheck deadline. The monitor never marks an offer as verified, renews a deadline, applies for a credential, or handles user traffic; those decisions require public evidence and review.

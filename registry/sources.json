@@ -1,0 +1,37 @@
+{
+  "schema": "model-commons.sources/v1",
+  "sources": [
+    {
+      "id": "openrouter-free-models",
+      "kind": "openrouter_models_api",
+      "url": "https://openrouter.ai/api/v1/models",
+      "official_domain": "openrouter.ai",
+      "stale_after_hours": 12,
+      "alert_after_failures": 3,
+      "can_prove": ["public_model_directory", "dynamic_free_model_membership"],
+      "cannot_prove": ["account_eligibility", "production_availability", "permanent_free"]
+    },
+    {
+      "id": "bai-promotions-en",
+      "kind": "official_text_page",
+      "url": "https://docs.b.ai/llmservice/promotions-and-pricing-notices/",
+      "official_domain": "docs.b.ai",
+      "stale_after_hours": 12,
+      "alert_after_failures": 3,
+      "assertions": [{"id":"api-zero-credit-promotion","pattern":"DeepSeek-V4-Flash[\\s\\S]{0,1600}(0 Credits|billed at 0 Credits)"}],
+      "can_prove": ["current_promotion_wording"],
+      "cannot_prove": ["permanent_free", "account_eligibility", "user_quota"]
+    },
+    {
+      "id": "bai-pricing-en",
+      "kind": "official_text_page",
+      "url": "https://docs.b.ai/llmservice/pricing-and-usage/",
+      "official_domain": "docs.b.ai",
+      "stale_after_hours": 24,
+      "alert_after_failures": 3,
+      "assertions": [{"id":"api-protocols-documented","pattern":"OpenAI Chat Completions[\\s\\S]{0,1200}Anthropic Messages"}],
+      "can_prove": ["public_standard_pricing_context"],
+      "cannot_prove": ["current_promotion", "account_eligibility", "user_quota"]
+    }
+  ]
+}
