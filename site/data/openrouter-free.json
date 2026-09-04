@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-09-04T16:27:37.161Z",
-  "count": 18,
+  "fetched_at": "2026-09-04T20:49:46.601Z",
+  "count": 19,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -25,7 +25,12 @@
     },
     {
       "id": "inclusionai/ling-3.0-flash-fin:free",
-      "name": "Ling 3.0 Flash Fin (free)",
+      "name": "inclusionAI: Ling 3.0 Flash Fin (free)",
+      "context_length": 262144
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash-sante:free",
+      "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
       "context_length": 262144
     },
     {
