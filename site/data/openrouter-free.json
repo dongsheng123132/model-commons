@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-09-06T11:04:33.887Z",
-  "count": 19,
+  "fetched_at": "2026-09-06T15:32:11.190Z",
+  "count": 18,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -92,11 +92,6 @@
       "id": "thinkingmachines/inkling:free",
       "name": "Thinking Machines: Inkling (free)",
       "context_length": 1048576
-    },
-    {
-      "id": "z-ai/glm-5.2:free",
-      "name": "Z.ai: GLM 5.2 (free)",
-      "context_length": 256000
     }
   ]
 }
