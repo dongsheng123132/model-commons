@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-09-08T16:43:32.906Z",
-  "count": 16,
+  "fetched_at": "2026-09-08T21:14:33.783Z",
+  "count": 18,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -37,6 +37,16 @@
       "id": "liquid/lfm-2.5-2.6b:free",
       "name": "LiquidAI: LFM2.5-2.6B (free)",
       "context_length": 65536
+    },
+    {
+      "id": "nex-agi/nex-n2.5-mini:free",
+      "name": "Nex AGI: Nex-N2.5-Mini (free)",
+      "context_length": 262144
+    },
+    {
+      "id": "nex-agi/nex-n2.5-pro:free",
+      "name": "Nex AGI: Nex-N2.5-Pro (free)",
+      "context_length": 262144
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
