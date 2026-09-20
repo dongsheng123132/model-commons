@@ -1,17 +1,12 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-09-19T20:48:33.650Z",
-  "count": 22,
+  "fetched_at": "2026-09-20T04:59:49.739Z",
+  "count": 21,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
       "name": "Cohere: North Mini Code (free)",
       "context_length": 256000
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash-0731:free",
-      "name": "DeepSeek: DeepSeek V4 Flash 0731 (free)",
-      "context_length": 1048576
     },
     {
       "id": "dots-studio/dots-3-note-preview:free",
