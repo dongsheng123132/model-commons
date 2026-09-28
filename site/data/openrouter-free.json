@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-09-28T14:08:19.898Z",
-  "count": 17,
+  "fetched_at": "2026-09-28T23:21:19.337Z",
+  "count": 16,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -21,11 +21,6 @@
     {
       "id": "google/gemma-4-31b-it:free",
       "name": "Google: Gemma 4 31B (free)",
-      "context_length": 262144
-    },
-    {
-      "id": "inclusionai/ling-3.0-flash-fin:free",
-      "name": "inclusionAI: Ling 3.0 Flash Fin (free)",
       "context_length": 262144
     },
     {
