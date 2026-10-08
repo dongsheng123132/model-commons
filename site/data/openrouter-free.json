@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-10-08T13:44:10.980Z",
-  "count": 16,
+  "fetched_at": "2026-10-08T23:25:48.353Z",
+  "count": 15,
   "models": [
     {
       "id": "apodex/apodex-1.1-mini:free",
@@ -26,11 +26,6 @@
     {
       "id": "google/gemma-4-31b-it:free",
       "name": "Google: Gemma 4 31B (free)",
-      "context_length": 262144
-    },
-    {
-      "id": "inclusionai/ling-3.0-flash-sante:free",
-      "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
       "context_length": 262144
     },
     {
