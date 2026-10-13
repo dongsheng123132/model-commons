@@ -1,13 +1,8 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-10-13T14:21:25.771Z",
-  "count": 15,
+  "fetched_at": "2026-10-13T22:53:30.848Z",
+  "count": 14,
   "models": [
-    {
-      "id": "apodex/apodex-1.1-mini:free",
-      "name": "Apodex: Apodex 1.1 Mini (free)",
-      "context_length": 262144
-    },
     {
       "id": "cohere/north-mini-code:free",
       "name": "Cohere: North Mini Code (free)",
