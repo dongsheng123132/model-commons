@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-10-19T04:51:34.340Z",
-  "count": 16,
+  "fetched_at": "2026-10-19T13:33:06.730Z",
+  "count": 17,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -27,6 +27,11 @@
       "id": "liquid/lfm-2.5-2.6b:free",
       "name": "LiquidAI: LFM2.5-2.6B (free)",
       "context_length": 65536
+    },
+    {
+      "id": "minimax/minimax-m3.1-flash:free",
+      "name": "MiniMax: MiniMax M3.1 Flash (free)",
+      "context_length": 1000000
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
