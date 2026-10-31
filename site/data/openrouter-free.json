@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-10-31T12:44:50.462Z",
-  "count": 16,
+  "fetched_at": "2026-10-31T21:42:20.507Z",
+  "count": 14,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -52,16 +52,6 @@
       "id": "nvidia/nemotron-3.5-super-vl:free",
       "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
       "context_length": 1000000
-    },
-    {
-      "id": "poolside/laguna-s-2.1:free",
-      "name": "Poolside: Laguna S 2.1 (free)",
-      "context_length": 262144
-    },
-    {
-      "id": "poolside/laguna-xs-2.1:free",
-      "name": "Poolside: Laguna XS 2.1 (free)",
-      "context_length": 262144
     },
     {
       "id": "recursive/flint-v1.0:free",
