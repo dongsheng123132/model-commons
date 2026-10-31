@@ -1,11 +1,11 @@
 {
   "schema": "model-commons.monitor/v1",
-  "generated_at": "2026-10-31T05:54:31.473Z",
+  "generated_at": "2026-10-31T12:44:50.462Z",
   "sources": {
     "openrouter-free-models": {
       "status": "ok",
-      "last_attempt_at": "2026-10-31T05:54:31.473Z",
-      "last_success_at": "2026-10-31T05:54:31.473Z",
+      "last_attempt_at": "2026-10-31T12:44:50.462Z",
+      "last_success_at": "2026-10-31T12:44:50.462Z",
       "http_status": 200,
       "content_sha256": "58aecec23f9de880f7f84e6361bf1794f60f35dbbc616897742b94f806079ac6",
       "failure_streak": 0,
@@ -13,8 +13,8 @@
     },
     "bai-promotions-en": {
       "status": "ok",
-      "last_attempt_at": "2026-10-31T05:54:31.473Z",
-      "last_success_at": "2026-10-31T05:54:31.473Z",
+      "last_attempt_at": "2026-10-31T12:44:50.462Z",
+      "last_success_at": "2026-10-31T12:44:50.462Z",
       "http_status": 200,
       "content_sha256": "522102657256129d35b5c0968b47ba46774f18f37facd253dc6f7daed539b734",
       "failure_streak": 0,
@@ -28,8 +28,8 @@
     },
     "bai-api-docs-en": {
       "status": "ok",
-      "last_attempt_at": "2026-10-31T05:54:31.473Z",
-      "last_success_at": "2026-10-31T05:54:31.473Z",
+      "last_attempt_at": "2026-10-31T12:44:50.462Z",
+      "last_success_at": "2026-10-31T12:44:50.462Z",
       "http_status": 200,
       "content_sha256": "7a32d38f51840a391857c2fd954d45c60c8f5c70e02f98e5405f9cdfc85c1ff0",
       "failure_streak": 0,
@@ -39,8 +39,8 @@
     },
     "gemini-pricing-en": {
       "status": "ok",
-      "last_attempt_at": "2026-10-31T05:54:31.473Z",
-      "last_success_at": "2026-10-31T05:54:31.473Z",
+      "last_attempt_at": "2026-10-31T12:44:50.462Z",
+      "last_success_at": "2026-10-31T12:44:50.462Z",
       "http_status": 200,
       "content_sha256": "fea7e38c76976c446a1e11ad85ce8ab242e917ab67c7aed08df10bc0060d7463",
       "failure_streak": 0,
@@ -50,8 +50,8 @@
     },
     "groq-free-plan-limits": {
       "status": "ok",
-      "last_attempt_at": "2026-10-31T05:54:31.473Z",
-      "last_success_at": "2026-10-31T05:54:31.473Z",
+      "last_attempt_at": "2026-10-31T12:44:50.462Z",
+      "last_success_at": "2026-10-31T12:44:50.462Z",
       "http_status": 200,
       "content_sha256": "3dd424f8a8fecd3da23e03571921d82e57a3576b9b413904fc6f9ba3c852d456",
       "failure_streak": 0,
@@ -61,8 +61,8 @@
     },
     "opencode-zen-free-models": {
       "status": "ok",
-      "last_attempt_at": "2026-10-31T05:54:31.473Z",
-      "last_success_at": "2026-10-31T05:54:31.473Z",
+      "last_attempt_at": "2026-10-31T12:44:50.462Z",
+      "last_success_at": "2026-10-31T12:44:50.462Z",
       "http_status": 200,
       "content_sha256": "4d2421a43765f0e1aa3ba81edfa1f20c473b840bd2c0654fba4d24f9b2d9ec00",
       "failure_streak": 0,
