@@ -22,20 +22,13 @@ jobs:
         with: {node-version: 22}
       - run: node scripts/validate-registry.mjs
       - run: node scripts/monitor-sources.mjs
-      - env:
+      # Payloads (title/label/body) are generated in node; the script below only decides
+      # between `gh issue edit` and `gh issue create`, so the body never goes stale.
+      - run: node scripts/monitor-issues.mjs sources > source-issues.json
+      - name: Update or create source-monitor issues
+        env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          node scripts/monitor-alerts.mjs > monitor-alerts.json
-          jq -c '.[]' monitor-alerts.json | while read -r alert; do
-            source_id="$(echo "$alert" | jq -r .id)"
-            alert_type="$(echo "$alert" | jq -r .type)"
-            title="[monitor:${source_id}:${alert_type}] official source needs review"
-            existing="$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number')"
-            if [ -z "$existing" ]; then
-              gh label create source-monitor --color B60205 --description 'Public source observation needs review' --force
-              gh issue create --title "$title" --label source-monitor --body "$(echo "$alert" | jq -r .body)"
-            fi
-          done
+        run: bash .github/scripts/upsert-issues.sh source-issues.json
       - run: |
           if git diff --quiet -- site/data; then exit 0; fi
           git config user.name 'model-commons-monitor[bot]'
@@ -51,12 +44,10 @@ jobs:
       - uses: actions/setup-node@v4
         with: {node-version: 22}
       - run: node scripts/validate-registry.mjs
-      - id: report
-        run: node scripts/stale-report.mjs > stale-report.md; test -s stale-report.md && echo 'has_stale=true' >> "$GITHUB_OUTPUT" || true
-      - if: steps.report.outputs.has_stale == 'true'
+      # Emits the overdue list as an upsert payload, or a close payload when nothing is
+      # overdue any more, so the single `registry-stale` issue always mirrors the registry.
+      - run: node scripts/monitor-issues.mjs registry > registry-issues.json
+      - name: Update or close the registry-stale issue
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          gh label create registry-stale --color B60205 --description 'Registry entry needs an evidence recheck' --force
-          existing="$(gh issue list --state open --label registry-stale --search 'Registry recheck overdue in:title' --json number --jq '.[0].number')"
-          if [ -z "$existing" ]; then gh issue create --title 'Registry recheck overdue' --label registry-stale --body-file stale-report.md; fi
+        run: bash .github/scripts/upsert-issues.sh registry-issues.json

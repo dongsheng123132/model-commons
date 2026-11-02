@@ -15,9 +15,27 @@ This is not a token pool. Users obtain and keep their own provider credentials.
 - API keys, cookies, accounts, shared credentials, referral secrets, or bypasses
 - Claims of permanent free access without first-party evidence
 
-## Trust states
+## Schema
 
-`verified` → reviewed evidence; `community_reported` → not yet promoted; `stale` → recheck overdue; `retired` → no longer offered; `disputed` → quarantined.
+`scripts/validate-registry.mjs` is the only authority for accepted values: CI rejects any `classification` or `status` it does not list, so this section, the issue forms, and [the submission skill](skills/model-commons-submit/SKILL.md) must mirror it.
+
+### Trust states
+
+`status` says how much the evidence is trusted. A `stale` entry is what the unattended monitor reports once its deadline passes; `disputed` is the quarantine state that keeps the evidence instead of deleting it.
+
+- `candidate` → submitted with an official URL; not reviewed by two maintainers yet
+- `community_reported` → a community report exists; not promoted yet
+- `verified` → first-party evidence reviewed and approved by two maintainers
+- `stale` → the recheck deadline (`recheck_by`) has passed; treat the entry as unverified until it is re-evidenced
+- `disputed` → quarantined after a credible contradiction or a vendor correction; the entry and its evidence stay in the registry instead of being deleted
+- `suspended` → withheld pending review, for example a provider pause or an unresolved failure report
+- `retired` → no longer offered; kept for history and excluded from the overdue report
+
+### Offer classes
+
+`classification` says what kind of supply the entry describes:
+
+- `permanent_free_tier`, `promo_free`, `trial_credit`, `subscription_bonus` (a paid plan perk), `low_cost` (paid but cheap, not free), `local_open_source`, `community_reported` (a report without a first-party offer page)
 
 ## Contribute
 
@@ -25,4 +43,13 @@ Use the repository issue forms for a candidate, verification report, or risk rep
 
 ## Unattended public-source monitor
 
-GitHub Actions monitors a whitelist of official public sources every six hours: OpenRouter's `:free` model directory, B.AI's promotions page, and B.AI's pricing/protocol documentation. It publishes a small observation snapshot and creates a source-specific Issue for repeated source failure or a missing monitored assertion. It also opens one `registry-stale` issue when an entry passes its recheck deadline. The monitor never marks an offer as verified, renews a deadline, applies for a credential, or handles user traffic; those decisions require public evidence and review.
+GitHub Actions monitors the whitelist in [`registry/sources.json`](registry/sources.json) every six hours. It currently holds six sources:
+
+1. `openrouter-free-models` — OpenRouter's public model directory, including its `:free` models
+2. `bai-promotions-en` — B.AI's promotions and pricing notices
+3. `bai-api-docs-en` — B.AI's API and protocol documentation
+4. `gemini-pricing-en` — Google Gemini API pricing and free tier
+5. `groq-free-plan-limits` — Groq's free-plan rate limits
+6. `opencode-zen-free-models` — OpenCode Zen's free-model documentation
+
+Every run publishes a small observation snapshot and keeps one open Issue per repeated source failure or missing monitored assertion. It also keeps the single `registry-stale` issue in sync with the entries whose recheck deadline has passed: an existing Issue gets its body rewritten on each run (latest overdue list plus timestamp), and it is closed once nothing is overdue. The monitor never marks an offer as verified, renews a deadline, applies for a credential, or handles user traffic; those decisions require public evidence and review.
