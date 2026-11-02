@@ -1,10 +1,25 @@
 name: Validate registry
 on:
   pull_request:
-    paths: [registry/**, scripts/validate-registry.mjs]
+    paths:
+      - 'registry/**'
+      - 'scripts/validate-registry.mjs'
+      - 'scripts/monitor-*.mjs'
+      - 'scripts/stale-report.mjs'
+      - '.github/workflows/monitor.yml'
+      - '.github/scripts/**'
+      - '.github/workflows/registry.yml'
   push:
     branches: [main]
-    paths: [registry/**, scripts/validate-registry.mjs]
+    paths:
+      - 'registry/**'
+      - 'scripts/validate-registry.mjs'
+      - 'scripts/monitor-*.mjs'
+      - 'scripts/stale-report.mjs'
+      - '.github/workflows/monitor.yml'
+      - '.github/scripts/**'
+      - '.github/workflows/registry.yml'
+
 permissions:
   contents: read
 jobs:
