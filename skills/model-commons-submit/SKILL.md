@@ -10,7 +10,8 @@ Submit a claim as evidence, never as a promise of free access.
 ## Before submitting
 
 - Prefer the provider's pricing, promotion, API, terms, or status page.
-- Classify exactly one of: `permanent_free_tier`, `promo_free`, `trial_credit`, `subscription_bonus`, `low_cost`, `local_open_source`, `retired`.
+- Classify exactly one of: `permanent_free_tier`, `promo_free`, `trial_credit`, `subscription_bonus`, `low_cost`, `local_open_source`, `community_reported` — the list enforced by `scripts/validate-registry.mjs`.
+- Set `status` to exactly one of: `candidate` (default for a new submission), `community_reported`, `verified`, `stale`, `disputed`, `suspended`, `retired`. `retired` is a status, never a classification.
 - State account, card, region, commercial-use, and automatic-charge conditions as `confirmed`, `unknown`, or `not_applicable`.
 - Do not include secrets, cookies, OAuth redirects, user prompts, full responses, or private account screenshots.
 
