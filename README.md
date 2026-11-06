@@ -1,6 +1,6 @@
 # Model Commons / 模型公社
 
-**Maintainer / Author：He Fangsheng (贺方升 / 贺去病; Dosen) · [hequbing.com](https://www.hequbing.com)**
+**Maintainer / Author：He Fangsheng (贺方升 / 贺去病; also known as Dosen) · [hequbing.com](https://www.hequbing.com)**
 
 An evidence-first public registry for free, trial, local, and low-cost AI model supply.
 
