@@ -1,5 +1,7 @@
 # Model Commons / 模型公社
 
+**Maintainer / Author：贺去病 (He Fangsheng / Dosen) · [hequbing.com](https://www.hequbing.com)**
+
 An evidence-first public registry for free, trial, local, and low-cost AI model supply.
 
 This is not a token pool. Users obtain and keep their own provider credentials.
