@@ -1,7 +1,7 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-11-10T19:50:23.918Z",
-  "count": 13,
+  "fetched_at": "2026-11-11T06:41:31.294Z",
+  "count": 12,
   "models": [
     {
       "id": "cohere/north-mini-code:free",
@@ -62,11 +62,6 @@
       "id": "thinkingmachines/inkling-2-small:free",
       "name": "Thinking Machines: Inkling 2 Small (free)",
       "context_length": 1048576
-    },
-    {
-      "id": "xingchen-agi/xing4.0-29b-a4b:free",
-      "name": "XingChen: Xing4.0 29B A4B (free)",
-      "context_length": 262144
     }
   ]
 }
