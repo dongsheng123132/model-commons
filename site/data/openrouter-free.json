@@ -1,8 +1,13 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-11-11T06:41:31.294Z",
-  "count": 12,
+  "fetched_at": "2026-11-11T19:42:05.360Z",
+  "count": 13,
   "models": [
+    {
+      "id": "baidu/ernie-5.5-flash-preview:free",
+      "name": "Baidu: ERNIE-5.5-Flash-Preview (free)",
+      "context_length": 1024000
+    },
     {
       "id": "cohere/north-mini-code:free",
       "name": "Cohere: North Mini Code (free)",
