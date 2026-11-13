@@ -1,13 +1,8 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-11-13T06:55:02.802Z",
-  "count": 15,
+  "fetched_at": "2026-11-13T19:50:26.571Z",
+  "count": 14,
   "models": [
-    {
-      "id": "apodex/apodex-1.1-mini:free",
-      "name": "Apodex: Apodex 1.1 Mini (free)",
-      "context_length": 262144
-    },
     {
       "id": "baidu/ernie-5.5-flash-preview:free",
       "name": "Baidu: ERNIE-5.5-Flash-Preview (free)",
@@ -34,9 +29,9 @@
       "context_length": 262144
     },
     {
-      "id": "liquid/lfm-2.5-2.6b:free",
-      "name": "LiquidAI: LFM2.5-2.6B (free)",
-      "context_length": 65536
+      "id": "inclusionai/ling-3.2-flash:free",
+      "name": "inclusionAI: Ling 3.2 Flash (free)",
+      "context_length": 1048576
     },
     {
       "id": "liquid/lfm-3-1.7b:free",
