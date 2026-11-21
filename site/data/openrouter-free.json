@@ -1,17 +1,12 @@
 {
   "source": "https://openrouter.ai/api/v1/models",
-  "fetched_at": "2026-11-20T20:29:53.561Z",
-  "count": 12,
+  "fetched_at": "2026-11-21T07:22:24.239Z",
+  "count": 11,
   "models": [
     {
       "id": "baidu/ernie-5.5-flash-preview:free",
       "name": "Baidu: ERNIE-5.5-Flash-Preview (free)",
       "context_length": 1024000
-    },
-    {
-      "id": "dots-studio/dots-3-note-preview:free",
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "context_length": 512000
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
